@@ -40,23 +40,23 @@ img{max-width:100%;display:block}
 
 /* ===== HEADER ===== */
 header{position:sticky;top:0;z-index:300;background:var(--navy);box-shadow:0 4px 20px rgba(0,0,0,.25)}
-.hbar{display:flex;align-items:center;justify-content:space-between;height:82px}
-.brand{display:flex;align-items:center;gap:14px}
-.crest{width:52px;height:52px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;color:var(--gold2);flex-shrink:0}
-.brand b{font-family:'Playfair Display',serif;font-size:22px;color:#fff;letter-spacing:.5px;display:block;line-height:1.15}
-.brand small{color:var(--gold2);font-size:10px;letter-spacing:3px;text-transform:uppercase}
-nav.desk{display:flex;gap:30px;align-items:center}
+.hbar{display:flex;align-items:center;justify-content:space-between;height:82px;gap:15px}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;max-width:calc(100% - 100px)}
+.crest{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:22px;color:var(--gold2);flex-shrink:0}
+.brand b{font-family:'Playfair Display',serif;font-size:18px;color:#fff;letter-spacing:.5px;display:block;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{color:var(--gold2);font-size:9.5px;letter-spacing:2px;text-transform:uppercase;display:block}
+nav.desk{display:flex;gap:24px;align-items:center}
 nav.desk a{color:rgba(255,255,255,.82);font-size:13.5px;letter-spacing:.4px;position:relative;padding:6px 0;cursor:pointer;transition:.25s;background:none;border:none;font-family:'Poppins',sans-serif}
 nav.desk a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.3s}
 nav.desk a:hover,nav.desk a.active{color:var(--gold2)}
 nav.desk a:hover::after,nav.desk a.active::after{width:100%}
-.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),#a9871c);color:#1c2430;font-weight:600;padding:12px 26px;border-radius:4px;font-size:13.5px;letter-spacing:.5px;transition:.3s;border:none;cursor:pointer;font-family:'Poppins',sans-serif}
+.btn{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),#a9871c);color:#1c2430;font-weight:600;padding:12px 24px;border-radius:4px;font-size:13.5px;letter-spacing:.5px;transition:.3s;border:none;cursor:pointer;font-family:'Poppins',sans-serif;white-space:nowrap;flex-shrink:0}
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(201,162,39,.4)}
 .btn.ghost{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
 .btn.ghost:hover{background:var(--gold);color:#1c2430}
 .btn.navy{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff}
 .btn.navy:hover{box-shadow:0 12px 26px rgba(12,35,64,.4)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
 .burger span{width:26px;height:2px;background:var(--gold2)}
 
 /* ===== PAGES ===== */
@@ -65,7 +65,7 @@ nav.desk a:hover::after,nav.desk a.active::after{width:100%}
 @keyframes pgIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 /* ===== HERO SLIDER ===== */
-.hero{position:relative;height:88vh;min-height:600px;overflow:hidden;background:var(--navy)}
+.hero{position:relative;height:88vh;min-height:550px;overflow:hidden;background:var(--navy)}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;align-items:center}
 .slide.on{opacity:1}
 .slide .bg{position:absolute;inset:0}
@@ -77,9 +77,9 @@ nav.desk a:hover::after,nav.desk a.active::after{width:100%}
 .slide .content{position:relative;z-index:2;max-width:640px}
 .kick{color:var(--gold2);letter-spacing:5px;font-size:12.5px;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .kick::before{content:"";width:44px;height:1px;background:var(--gold2)}
-.slide h1{font-size:clamp(38px,5.4vw,66px);line-height:1.1;color:#fff;font-weight:700;margin-bottom:20px}
+.slide h1{font-size:clamp(34px,5vw,62px);line-height:1.15;color:#fff;font-weight:700;margin-bottom:20px}
 .slide h1 em{font-style:italic;color:var(--gold2);font-weight:500}
-.slide p{color:rgba(255,255,255,.78);font-weight:300;line-height:1.85;font-size:16px;max-width:520px;margin-bottom:30px}
+.slide p{color:rgba(255,255,255,.78);font-weight:300;line-height:1.85;font-size:15px;max-width:520px;margin-bottom:30px}
 .hero-dots{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
 .hero-dots button{width:34px;height:3px;border:none;background:rgba(255,255,255,.3);cursor:pointer;transition:.3s;border-radius:2px}
 .hero-dots button.on{background:var(--gold);width:48px}
@@ -89,28 +89,28 @@ nav.desk a:hover::after,nav.desk a.active::after{width:100%}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 /* ===== NOTICE MARQUEE ===== */
-.notice{background:var(--gold);color:#1c2430;overflow:hidden;padding:12px 0;display:flex;align-items:center}
-.notice b{background:var(--navy);color:#fff;font-size:11px;letter-spacing:2px;padding:6px 14px;margin:0 18px;border-radius:3px;white-space:nowrap;text-transform:uppercase}
-.notice .track{display:inline-flex;white-space:nowrap;animation:scroll 30s linear infinite;font-size:13.5px;font-weight:500}
+.notice{background:var(--gold);color:#1c2430;overflow:hidden;padding:8px 0;display:flex;align-items:center;position:relative}
+.notice b{background:var(--navy);color:#fff;font-size:11px;letter-spacing:2px;padding:6px 14px;margin:0 14px;border-radius:3px;white-space:nowrap;text-transform:uppercase;z-index:2;box-shadow:2px 0 10px rgba(0,0,0,0.15)}
+.notice .track{display:inline-flex;white-space:nowrap;animation:scroll 30s linear infinite;font-size:13.5px;font-weight:500;padding-left:10px}
 @keyframes scroll{to{transform:translateX(-50%)}}
 .notice span{padding:0 36px}
 .notice i{font-style:normal;color:var(--navy)}
 
 /* ===== SECTIONS ===== */
-section{padding:92px 0}
-.shead{text-align:center;max-width:680px;margin:0 auto 56px}
+section{padding:80px 0}
+.shead{text-align:center;max-width:680px;margin:0 auto 50px}
 .shead .kick{justify-content:center;color:var(--gold)}
 .shead .kick::after{content:"";width:44px;height:1px;background:var(--gold)}
-.shead h2{font-size:clamp(30px,4vw,46px);margin:16px 0 14px;color:var(--navy)}
+.shead h2{font-size:clamp(28px,3.8vw,42px);margin:16px 0 14px;color:var(--navy)}
 .shead p{color:var(--muted);font-weight:300}
 
 /* ===== WELCOME ===== */
-.welcome-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.welcome-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
 .wimg{border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/4.2;background:linear-gradient(150deg,#dfe7f2,#c6d3e6);display:flex;align-items:center;justify-content:center;font-size:74px;position:relative;box-shadow:0 30px 60px rgba(12,35,64,.15)}
 .wimg .exp{position:absolute;bottom:-22px;right:-16px;background:var(--navy);color:#fff;border-radius:10px;padding:20px 26px;text-align:center;box-shadow:0 18px 36px rgba(12,35,64,.35)}
 .wimg .exp b{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold2);display:block}
 .wimg .exp span{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;opacity:.8}
-.welcome-grid h2{font-size:clamp(28px,3.4vw,42px);margin:16px 0 18px;color:var(--navy)}
+.welcome-grid h2{font-size:clamp(26px,3.2vw,40px);margin:16px 0 18px;color:var(--navy)}
 .welcome-grid p{color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:16px}
 .sig{margin-top:22px;display:flex;align-items:center;gap:16px}
 .sig .av{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px}
@@ -147,20 +147,12 @@ section{padding:92px 0}
 
 /* ===== ACADEMICS ===== */
 #academics{background:var(--ivory2)}
-.acad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.acad{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.4s}
-.acad:hover{transform:translateY(-8px);box-shadow:0 26px 52px rgba(12,35,64,.14)}
-.acad .img{height:150px;background:linear-gradient(140deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;font-size:52px}
-.acad .body{padding:26px 28px 30px}
-.acad small{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:10.5px;font-weight:600}
-.acad h3{font-size:20px;margin:8px 0 10px;color:var(--navy)}
-.acad p{font-size:13.5px;color:var(--muted);font-weight:300;line-height:1.75}
-.levels{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:44px}
-.lvl{background:#fff;border:1px solid var(--line);border-radius:50px;padding:11px 26px;font-size:13.5px;color:var(--navy);font-weight:500}
+.levels{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+.lvl{background:#fff;border:1px solid var(--line);border-radius:50px;padding:12px 28px;font-size:14px;color:var(--navy);font-weight:500}
 .lvl b{color:var(--gold)}
 
 /* ===== TOPPERS TEASER ===== */
-.top-band{background:linear-gradient(120deg,var(--navy3),var(--navy));padding:90px 0;position:relative;overflow:hidden}
+.top-band{background:linear-gradient(120deg,var(--navy3),var(--navy));padding:80px 0;position:relative;overflow:hidden}
 .top-band::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 15% 85%,rgba(201,162,39,.16),transparent 55%)}
 .top-band .shead h2{color:#fff}
 .top-band .shead p{color:rgba(255,255,255,.6)}
@@ -183,16 +175,16 @@ section{padding:92px 0}
 .rv small{color:var(--muted);font-size:12px}
 
 /* ===== CTA BANNER ===== */
-.cta-band{background:linear-gradient(120deg,var(--gold),#a9871c);padding:70px 0;position:relative;overflow:hidden}
+.cta-band{background:linear-gradient(120deg,var(--gold),#a9871c);padding:60px 0;position:relative;overflow:hidden}
 .cta-band::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8"/></filter><rect width="120" height="120" filter="url(%23n)" opacity=".07"/></svg>')}
 .cta-band .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative}
-.cta-band h2{color:#1c2430;font-size:clamp(26px,3.2vw,38px)}
+.cta-band h2{color:#1c2430;font-size:clamp(24px,3vw,36px)}
 .cta-band p{color:rgba(28,36,48,.75);font-weight:300;margin-top:6px}
 
-/* ===== PAGE HEADERS (inner pages) ===== */
-.pg-hero{background:linear-gradient(120deg,var(--navy3),var(--navy2));padding:130px 0 80px;position:relative;overflow:hidden;text-align:center}
+/* ===== PAGE HEADERS ===== */
+.pg-hero{background:linear-gradient(120deg,var(--navy3),var(--navy2));padding:120px 0 70px;position:relative;overflow:hidden;text-align:center}
 .pg-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 15%,rgba(201,162,39,.2),transparent 55%)}
-.pg-hero h1{color:#fff;font-size:clamp(34px,4.6vw,56px);position:relative}
+.pg-hero h1{color:#fff;font-size:clamp(32px,4.5vw,52px);position:relative}
 .pg-hero p{color:rgba(255,255,255,.65);margin-top:12px;font-weight:300;position:relative}
 .pg-hero .crumb{position:relative;margin-top:20px;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2)}
 .pg-hero .crumb a{cursor:pointer}
@@ -213,9 +205,6 @@ section{padding:92px 0}
 .tyr-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap}
 .tyr{padding:12px 30px;border-radius:50px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-size:14px;cursor:pointer;transition:.3s;font-family:'Poppins',sans-serif;font-weight:500}
 .tyr.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.class-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:40px}
-.ctr{padding:11px 28px;border-radius:6px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-size:13.5px;cursor:pointer;transition:.3s;font-family:'Poppins',sans-serif;font-weight:500}
-.ctr.active{background:var(--gold);border-color:var(--gold);color:#1c2430}
 .top-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .tp-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:36px 28px;text-align:center;transition:.4s;position:relative;overflow:hidden}
 .tp-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
@@ -227,22 +216,17 @@ section{padding:92px 0}
 .tp-card small{color:var(--muted);font-size:12px}
 .tp-card .pct{margin-top:14px;font-family:'Playfair Display',serif;font-size:40px;color:var(--gold)}
 .tp-card .stream{font-size:12.5px;color:var(--muted);margin-top:6px}
-.res-strip{margin-top:56px;background:var(--navy);border-radius:14px;padding:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.res-strip{margin-top:56px;background:var(--navy);border-radius:14px;padding:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:center}
 .res-strip b{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold2);display:block}
 .res-strip span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6)}
 
 /* ===== ADMISSIONS PAGE ===== */
-.adm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:70px}
+.adm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:60px}
 .adm-step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 26px;text-align:center;position:relative;transition:.4s}
 .adm-step:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(12,35,64,.12)}
 .adm-step .n{width:52px;height:52px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:var(--gold2);font-family:'Playfair Display',serif;font-size:23px;display:flex;align-items:center;justify-content:center}
 .adm-step h3{font-size:17px;color:var(--navy);margin-bottom:10px}
 .adm-step p{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.7}
-table.fees{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(12,35,64,.08)}
-table.fees th{background:var(--navy);color:#fff;padding:16px 20px;text-align:left;font-weight:500;font-size:14px;letter-spacing:.4px}
-table.fees td{padding:15px 20px;border-bottom:1px solid var(--ivory2);font-size:14px;color:var(--ink)}
-table.fees tr:hover td{background:var(--ivory)}
-table.fees td b{color:var(--gold)}
 
 /* ===== ENQUIRY FORM ===== */
 .enq{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 24px 50px rgba(12,35,64,.1);max-width:760px;margin:0 auto}
@@ -296,32 +280,33 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1000px){
-  .fac-grid,.acad-grid,.vm-grid,.top-grid,.rv-grid,.top-wrap,.adm-grid{grid-template-columns:repeat(2,1fr)}
+  .fac-grid,.vm-grid,.top-grid,.rv-grid,.top-wrap,.adm-grid{grid-template-columns:repeat(2,1fr)}
   .welcome-grid,.prin-grid,.ct-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .gal{grid-template-columns:repeat(2,1fr)}
   .f-grid{grid-template-columns:1fr 1fr}
-  .res-strip{grid-template-columns:1fr;gap:30px}
 }
 @media(max-width:820px){
-  nav.desk{display:none}
+  nav.desk, .hbar > .btn{display:none}
   .burger{display:flex}
-  .mnav{position:fixed;inset:0;background:var(--navy);z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateY(-105%);transition:.45s}
+  .brand b{font-size:16px}
+  .mnav{position:fixed;inset:0;background:var(--navy);z-index:400;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transform:translateY(-105%);transition:.45s}
   .mnav.open{transform:none}
-  .mnav a{color:#fff;font-size:20px;font-family:'Playfair Display',serif;cursor:pointer}
+  .mnav a{color:#fff;font-size:18px;font-family:'Playfair Display',serif;cursor:pointer}
   .mnav a:hover{color:var(--gold2)}
   .mnav .close{position:absolute;top:26px;right:26px;background:none;border:none;color:var(--gold2);font-size:30px;cursor:pointer}
   .hero-badge{display:none}
   .hbar{height:70px}
 }
 @media(max-width:640px){
-  .fac-grid,.acad-grid,.vm-grid,.top-grid,.rv-grid,.top-wrap,.adm-grid{grid-template-columns:1fr}
+  .fac-grid,.vm-grid,.top-grid,.rv-grid,.top-wrap,.adm-grid{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
   .f-grid{grid-template-columns:1fr}
-  .slide h1{font-size:34px}
+  .res-strip{grid-template-columns:1fr}
+  .slide h1{font-size:32px}
   .tstrip .wrap{justify-content:center}
-  section{padding:64px 0}
-  .enq{padding:28px 22px}
+  section{padding:54px 0}
+  .enq{padding:24px 18px}
 }
 </style>
 </head>
@@ -344,6 +329,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
   <a onclick="go('admissions')">Admissions</a>
   <a onclick="go('gallery')">Gallery</a>
   <a onclick="go('contact')">Contact Us</a>
+  <button class="btn" style="margin-top:10px" onclick="go('contact')">✉️ Contact Us</button>
 </div>
 
 <!-- TOP STRIP -->
@@ -398,7 +384,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <div class="wrap"><div class="content">
         <div class="kick">Admissions Open · 2026-27</div>
         <h1>Give Your Child<br>the <em>Best Start</em></h1>
-        <p>From Pre-Nursery to Class XII — experienced faculty, smart classrooms, and a safe, inspiring campus in the heart of Darbhanga.</p>
+        <p>From Pre-Nursery to Class X — experienced faculty, smart classrooms, and a safe, inspiring campus in the heart of Darbhanga.</p>
         <button class="btn" onclick="go('admissions')">🎓 Admission Process</button>
       </div></div>
     </div>
@@ -406,7 +392,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <div class="wrap"><div class="content">
         <div class="kick">Excellence in Education Since 1998</div>
         <h1>Results That<br><em>Speak</em> Themselves</h1>
-        <p>Consistently outstanding board results, district toppers, and alumni at premier institutions across India.</p>
+        <p>Consistently outstanding board results, district toppers, and bright young achievers.</p>
         <button class="btn" onclick="go('toppers')">🏆 Meet Our Toppers</button>
       </div></div>
     </div>
@@ -423,11 +409,11 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
     <b>📢 Notices</b>
     <div class="track">
       <span>Admissions open for Session 2026-27 — Limited seats <i>✦</i></span>
-      <span>Class X &amp; XII Board Examination Schedule Released <i>✦</i></span>
+      <span>Class X Board Examination Schedule Released <i>✦</i></span>
       <span>Annual Sports Day — Coming Soon <i>✦</i></span>
       <span>Parent-Teacher Meeting — Last Saturday of every month <i>✦</i></span>
       <span>Admissions open for Session 2026-27 — Limited seats <i>✦</i></span>
-      <span>Class X &amp; XII Board Examination Schedule Released <i>✦</i></span>
+      <span>Class X Board Examination Schedule Released <i>✦</i></span>
       <span>Annual Sports Day — Coming Soon <i>✦</i></span>
       <span>Parent-Teacher Meeting — Last Saturday of every month <i>✦</i></span>
     </div>
@@ -440,7 +426,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <div class="reveal">
         <div class="kick">Welcome to Sunrise</div>
         <h2>A Legacy of Learning &amp; Character</h2>
-        <p>Sunrise Public School, Darbhanga has been a beacon of quality education for over two decades. affiliated to CBSE, we blend academic rigour with values, sports, and the arts — shaping confident, compassionate young citizens.</p>
+        <p>Sunrise Public School, Darbhanga has been a beacon of quality education for over two decades. Affiliated to CBSE, we blend academic rigour with values, sports, and the arts — shaping confident, compassionate young citizens.</p>
         <p>Our modern campus features smart classrooms, well-equipped science and computer labs, a rich library, and expansive play areas — everything a growing mind needs.</p>
         <div class="sig">
           <div class="av">SK</div>
@@ -476,7 +462,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
         <div class="fac reveal"><div class="em">🔬</div><h3>Science &amp; Computer Labs</h3><p>Fully equipped Physics, Chemistry, Biology and modern computer laboratories.</p></div>
         <div class="fac reveal"><div class="em">📚</div><h3>Rich Library</h3><p>Thousands of books, journals and reference materials in a quiet reading space.</p></div>
         <div class="fac reveal"><div class="em">⚽</div><h3>Sports Complex</h3><p>Football ground, basketball court, cricket nets and indoor games arena.</p></div>
-        <div class="fac reveal"><div class="em">🚌</div><h3>GPS-Enabled Transport</h3><p>Safe, comfortable buses covering all major routes across Darbhanga city.</p></div>
+        <div class="fac reveal"><div class="em">🚌</div><h3>School Transport</h3><p>Safe, comfortable buses covering all major routes across Darbhanga city.</p></div>
         <div class="fac reveal"><div class="em">🛡️</div><h3>Safe &amp; Secure Campus</h3><p>CCTV-monitored campus, trained support staff and strict safety protocols.</p></div>
       </div>
     </div>
@@ -502,20 +488,14 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
     <div class="wrap">
       <div class="shead reveal">
         <div class="kick">Academics</div>
-        <h2>Streams &amp; Programmes</h2>
-        <p>Senior Secondary (Class XI–XII) streams offered</p>
-      </div>
-      <div class="acad-grid">
-        <div class="acad reveal"><div class="img">🔬</div><div class="body"><small>Science Stream</small><h3>Science (PCM / PCB)</h3><p>Physics, Chemistry, Mathematics, Biology with Computer Science / Physical Education. Gateway to engineering, medicine &amp; research.</p></div></div>
-        <div class="acad reveal"><div class="img">💼</div><div class="body"><small>Commerce Stream</small><h3>Commerce</h3><p>Accountancy, Business Studies, Economics, Mathematics / Entrepreneurship. Foundation for CA, CS, banking &amp; management careers.</p></div></div>
-        <div class="acad reveal"><div class="img">📖</div><div class="body"><small>Humanities Stream</small><h3>Arts / Humanities</h3><p>History, Political Science, Geography, Sociology, Psychology. Paths to civil services, law, teaching &amp; social sciences.</p></div></div>
+        <h2>Our Classes</h2>
+        <p>Comprehensive Education up to Class 10th</p>
       </div>
       <div class="levels reveal">
-        <div class="lvl"><b>Pre-Nursery</b> to <b>UKG</b></div>
-        <div class="lvl"><b>Class I</b> to <b>V</b> — Primary</div>
-        <div class="lvl"><b>Class VI</b> to <b>VIII</b> — Middle</div>
-        <div class="lvl"><b>Class IX</b> to <b>X</b> — Secondary</div>
-        <div class="lvl"><b>Class XI</b> to <b>XII</b> — Sr. Secondary</div>
+        <div class="lvl"><b>Pre-Nursery</b> to <b>UKG</b> — Foundational Stage</div>
+        <div class="lvl"><b>Class I</b> to <b>V</b> — Primary Level</div>
+        <div class="lvl"><b>Class VI</b> to <b>VIII</b> — Middle Level</div>
+        <div class="lvl"><b>Class IX</b> to <b>X</b> — Secondary Level (CBSE)</div>
       </div>
     </div>
   </section>
@@ -526,7 +506,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <div class="shead reveal">
         <div class="kick" style="color:var(--gold2)">Hall of Fame</div>
         <h2>Our Shining Toppers</h2>
-        <p>Class X &amp; XII · CBSE Board Results</p>
+        <p>Class X · CBSE Board Results</p>
       </div>
       <div class="top-grid" id="homeToppers"></div>
       <div style="text-align:center;margin-top:48px" class="reveal">
@@ -545,7 +525,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <div class="rv-grid">
         <div class="rv reveal"><div class="stars">★★★★★</div><p>"Sunrise has transformed my daughter — confident, disciplined and topping her class. The teachers genuinely care about every child."</p><b>Mrs. Ritu Singh</b><small>Parent · Class VIII</small></div>
         <div class="rv reveal"><div class="stars">★★★★★</div><p>"Excellent school with a perfect balance of studies, sports and values. The principal personally ensures quality. Highly recommended."</p><b>Mr. Md. Imran</b><small>Parent · Class X</small></div>
-        <div class="rv reveal"><div class="stars">★★★★☆</div><p>"My son scored 95% in boards — full credit to the dedicated faculty and regular test series. Thank you, Sunrise family!"</p><b>Mrs. Sunita Jha</b><small>Parent · Class XII</small></div>
+        <div class="rv reveal"><div class="stars">★★★★☆</div><p>"My son scored 98% in X boards — full credit to the dedicated faculty and regular test series. Thank you, Sunrise family!"</p><b>Mrs. Sunita Jha</b><small>Parent · Class X</small></div>
       </div>
     </div>
   </section>
@@ -555,7 +535,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
     <div class="wrap">
       <div>
         <h2 class="serif">Admissions Open for Session 2026–27</h2>
-        <p>Limited seats available · Pre-Nursery to Class XI · Enquire today</p>
+        <p>Limited seats available · Pre-Nursery to Class X · Enquire today</p>
       </div>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <button class="btn navy" onclick="go('admissions')">🎓 Admission Details</button>
@@ -581,7 +561,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
         <h2 style="color:var(--navy);font-size:clamp(28px,3.4vw,42px);margin:16px 0">Building minds, building the nation</h2>
         <p style="color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:16px">Founded in 1998, Sunrise Public School began with a vision — to bring quality, affordable CBSE education to the families of Darbhanga. Today, we stand as one of the region's most trusted institutions, with 1,800+ students and a team of 85 dedicated educators.</p>
         <p style="color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:16px">Our philosophy is simple: every child is unique. We combine strong academics with sports, cultural activities, and life-skills education so our students excel in every field they choose.</p>
-        <p style="color:var(--muted);font-weight:300;line-height:1.9">From our first batch of 40 students to thousands of successful alumni — doctors, engineers, officers, and artists — the Sunrise journey continues with the same passion.</p>
+        <p style="color:var(--muted);font-weight:300;line-height:1.9">From our first batch of 40 students to thousands of successful alumni — the Sunrise journey continues with the same passion.</p>
       </div>
       <div class="wimg reveal">🎓<div class="exp"><b>25+</b><span>Years</span></div></div>
     </div>
@@ -618,12 +598,34 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
   </section>
 </div>
 
+<!-- ================= ACADEMICS PAGE ================= -->
+<div class="page" id="pg-academicsPg">
+  <div class="pg-hero">
+    <div class="wrap">
+      <h1>Our <em style="color:var(--gold2);font-style:italic">Academics</em></h1>
+      <p>Quality Education from Pre-Nursery to Class 10th</p>
+      <div class="crumb"><a onclick="go('home')">Home</a> &nbsp;/&nbsp; Academics</div>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <div class="shead reveal"><div class="kick">Academic Levels</div><h2>Structured Curriculum for Every Age</h2></div>
+      <div class="adm-grid">
+        <div class="adm-step reveal"><div class="n">1</div><h3>Foundational</h3><p><b>Pre-Nursery to UKG</b><br>Play-based and activity-driven learning fostering early skills &amp; confidence.</p></div>
+        <div class="adm-step reveal"><div class="n">2</div><h3>Primary</h3><p><b>Class I to V</b><br>Strong foundation in English, Math, EVS, and holistic value education.</p></div>
+        <div class="adm-step reveal"><div class="n">3</div><h3>Middle</h3><p><b>Class VI to VIII</b><br>Developing analytical thinking in Sciences, Social Studies, and Languages.</p></div>
+        <div class="adm-step reveal"><div class="n">4</div><h3>Secondary</h3><p><b>Class IX &amp; X</b><br>Comprehensive CBSE board preparation with continuous assessment.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <!-- ================= TOPPERS PAGE ================= -->
 <div class="page" id="pg-toppers">
   <div class="pg-hero">
     <div class="wrap">
       <h1>Hall of <em style="color:var(--gold2);font-style:italic">Fame</em></h1>
-      <p>Celebrating academic excellence — CBSE Board Toppers</p>
+      <p>Celebrating academic excellence — Class X CBSE Board Toppers</p>
       <div class="crumb"><a onclick="go('home')">Home</a> &nbsp;/&nbsp; Toppers</div>
     </div>
   </div>
@@ -634,15 +636,10 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
         <button class="tyr" onclick="setYear('2024',this)">Session 2023–24</button>
         <button class="tyr" onclick="setYear('2023',this)">Session 2022–23</button>
       </div>
-      <div class="class-tabs">
-        <button class="ctr active" onclick="setCls('xii',this)">Class XII</button>
-        <button class="ctr" onclick="setCls('x',this)">Class X</button>
-      </div>
       <div class="top-wrap" id="topWrap"></div>
       <div class="res-strip">
-        <div><b>98.6%</b><span>Class XII School Average</span></div>
-        <div><b>97.8%</b><span>Class X School Average</span></div>
-        <div><b>100%</b><span>Students Passed</span></div>
+        <div><b>97.8%</b><span>Class X Highest Score</span></div>
+        <div><b>100%</b><span>Pass Percentage</span></div>
       </div>
       <p class="shead" style="margin-top:44px;font-size:13px;color:var(--muted);font-weight:300">* Demo data — school ke real toppers ki photos aur marks bhejne pe yahan add ho jayenge</p>
     </div>
@@ -665,23 +662,10 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
         <div class="adm-step reveal"><div class="n">1</div><h3>Enquiry</h3><p>Fill the enquiry form below or visit the school office on working days (9 AM – 2 PM).</p></div>
         <div class="adm-step reveal"><div class="n">2</div><h3>Campus Visit</h3><p>Tour the campus, meet our counsellors, and collect the registration form.</p></div>
         <div class="adm-step reveal"><div class="n">3</div><h3>Interaction</h3><p>Friendly interaction with the child (Pre-Nursery–V) / entrance test (Class VI onwards).</p></div>
-        <div class="adm-step reveal"><div class="n">4</div><h3>Confirmation</h3><p>Submit documents, complete fee payment — welcome to the Sunrise family!</p></div>
+        <div class="adm-step reveal"><div class="n">4</div><h3>Confirmation</h3><p>Submit documents, complete verification — welcome to the Sunrise family!</p></div>
       </div>
 
-      <div class="shead reveal"><div class="kick">Fee Structure</div><h2>Transparent &amp; Affordable</h2><p style="font-size:13px">(Indicative — final fees school office se confirm karein)</p></div>
-      <div class="reveal" style="overflow-x:auto">
-        <table class="fees">
-          <tr><th>Class</th><th>Registration Fee</th><th>Monthly Tuition</th><th>Admission Fee (One-time)</th></tr>
-          <tr><td>Pre-Nursery – UKG</td><td>₹500</td><td><b>₹1,500</b></td><td>₹5,000</td></tr>
-          <tr><td>Class I – V</td><td>₹500</td><td><b>₹1,800</b></td><td>₹6,000</td></tr>
-          <tr><td>Class VI – VIII</td><td>₹500</td><td><b>₹2,200</b></td><td>₹7,000</td></tr>
-          <tr><td>Class IX – X</td><td>₹500</td><td><b>₹2,600</b></td><td>₹8,000</td></tr>
-          <tr><td>Class XI – XII (Science)</td><td>₹1,000</td><td><b>₹3,200</b></td><td>₹10,000</td></tr>
-          <tr><td>Class XI – XII (Comm./Arts)</td><td>₹1,000</td><td><b>₹2,800</b></td><td>₹10,000</td></tr>
-        </table>
-      </div>
-
-      <div class="shead reveal" style="margin-top:80px"><div class="kick">Enquire Now</div><h2>Admission Enquiry Form</h2><p>Form bharte jao — details WhatsApp pe automatically chali jayengi</p></div>
+      <div class="shead reveal" style="margin-top:40px"><div class="kick">Enquire Now</div><h2>Admission Enquiry Form</h2><p>Form bharte jao — details WhatsApp pe automatically chali jayengi</p></div>
       <div class="enq reveal">
         <h3 class="serif">🎓 Admission Enquiry</h3>
         <p>Hamari team 24 hours mein contact karegi</p>
@@ -696,8 +680,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
               <option>Class I</option><option>Class II</option><option>Class III</option>
               <option>Class IV</option><option>Class V</option><option>Class VI</option>
               <option>Class VII</option><option>Class VIII</option><option>Class IX</option>
-              <option>Class X</option><option>Class XI — Science</option>
-              <option>Class XI — Commerce</option><option>Class XI — Arts</option>
+              <option>Class X</option>
             </select>
           </div>
           <div class="fg"><label>Phone Number</label><input type="tel" id="enqPhone" placeholder="10-digit mobile number"></div>
@@ -770,8 +753,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
         </div>
         <div class="fg"><label>Subject</label>
           <select id="ctSub">
-            <option>Admission Enquiry</option><option>Fee Related</option>
-            <option>Transport Query</option><option>General Query</option><option>Feedback</option>
+            <option>Admission Enquiry</option><option>Transport Query</option><option>General Query</option><option>Feedback</option>
           </select>
         </div>
         <div class="fg"><label>Message</label><textarea id="ctMsg" rows="4" placeholder="Write your message..."></textarea></div>
@@ -802,7 +784,6 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
       <h4>Information</h4>
       <ul>
         <li><a onclick="go('admissions')">Admissions 2026-27</a></li>
-        <li><a onclick="go('admissions')">Fee Structure</a></li>
         <li><a onclick="go('contact')">Contact Us</a></li>
         <li><a>Mandatory Disclosures</a></li>
         <li><a>Careers</a></li>
@@ -827,7 +808,7 @@ footer{background:var(--navy3);color:rgba(255,255,255,.65);padding:70px 0 0}
    ========================================================= */
 const SCHOOL = {
   name: "Sunrise Public School",
-  whatsapp: "919800000000",   // ← School office ka WhatsApp number (91 + number)
+  whatsapp: "919800000000",
   email: "info@sunriseschool.edu.in"
 };
 
@@ -875,65 +856,35 @@ statsObs.observe(document.querySelector('.stats-band'));
 
 /* ===== TOPPERS DATA ===== */
 const TOPPERS = {
-  "2025":{
-    "xii":[
-      {n:"Ananya Verma",s:"Science (PCM)",p:"98.4%",rank:"1"},
-      {n:"Aditya Raj",s:"Science (PCB)",p:"97.6%",rank:"2"},
-      {n:"Priya Sharma",s:"Commerce",p:"96.8%",rank:"3"},
-      {n:"Rohit Kumar",s:"Science (PCM)",p:"96.2%",rank:"4"},
-      {n:"Sneha Singh",s:"Arts",p:"95.7%",rank:"5"},
-      {n:"Md. Faizan",s:"Commerce",p:"95.1%",rank:"6"}
-    ],
-    "x":[
-      {n:"Khushi Gupta",s:"Class X",p:"98.2%",rank:"1"},
-      {n:"Arnav Jha",s:"Class X",p:"97.4%",rank:"2"},
-      {n:"Ishita Roy",s:"Class X",p:"96.9%",rank:"3"},
-      {n:"Devansh Mishra",s:"Class X",p:"96.3%",rank:"4"},
-      {n:"Zoya Khan",s:"Class X",p:"95.8%",rank:"5"},
-      {n:"Yash Raj",s:"Class X",p:"95.2%",rank:"6"}
-    ]
-  },
-  "2024":{
-    "xii":[
-      {n:"Shreya Kumari",s:"Science (PCB)",p:"98.0%",rank:"1"},
-      {n:"Aryan Singh",s:"Science (PCM)",p:"97.2%",rank:"2"},
-      {n:"Nikita Jha",s:"Commerce",p:"96.5%",rank:"3"},
-      {n:"Harsh Raj",s:"Science (PCM)",p:"95.9%",rank:"4"},
-      {n:"Meghna Das",s:"Arts",p:"95.3%",rank:"5"},
-      {n:"Sohail Ansari",s:"Commerce",p:"94.8%",rank:"6"}
-    ],
-    "x":[
-      {n:"Tanmay Kumar",s:"Class X",p:"97.8%",rank:"1"},
-      {n:"Riya Sharma",s:"Class X",p:"97.1%",rank:"2"},
-      {n:"Aarav Singh",s:"Class X",p:"96.6%",rank:"3"},
-      {n:"Kajal Verma",s:"Class X",p:"96.0%",rank:"4"},
-      {n:"Vikash Yadav",s:"Class X",p:"95.4%",rank:"5"},
-      {n:"Anjali Kumari",s:"Class X",p:"94.9%",rank:"6"}
-    ]
-  },
-  "2023":{
-    "xii":[
-      {n:"Rahul Ranjan",s:"Science (PCM)",p:"97.6%",rank:"1"},
-      {n:"Pooja Bharti",s:"Science (PCB)",p:"96.9%",rank:"2"},
-      {n:"Sameer Ali",s:"Commerce",p:"96.2%",rank:"3"},
-      {n:"Nandini Singh",s:"Arts",p:"95.5%",rank:"4"},
-      {n:"Abhishek Raj",s:"Science (PCM)",p:"95.0%",rank:"5"},
-      {n:"Sakshi Mishra",s:"Commerce",p:"94.4%",rank:"6"}
-    ],
-    "x":[
-      {n:"Gaurav Kumar",s:"Class X",p:"97.2%",rank:"1"},
-      {n:"Simran Kaur",s:"Class X",p:"96.5%",rank:"2"},
-      {n:"Aman Raj",s:"Class X",p:"96.0%",rank:"3"},
-      {n:"Priyanka Jha",s:"Class X",p:"95.6%",rank:"4"},
-      {n:"Ritesh Ranjan",s:"Class X",p:"95.0%",rank:"5"},
-      {n:"Neha Bharti",s:"Class X",p:"94.5%",rank:"6"}
-    ]
-  }
+  "2025": [
+    {n:"Khushi Gupta",s:"Class X",p:"98.2%",rank:"1"},
+    {n:"Arnav Jha",s:"Class X",p:"97.4%",rank:"2"},
+    {n:"Ishita Roy",s:"Class X",p:"96.9%",rank:"3"},
+    {n:"Devansh Mishra",s:"Class X",p:"96.3%",rank:"4"},
+    {n:"Zoya Khan",s:"Class X",p:"95.8%",rank:"5"},
+    {n:"Yash Raj",s:"Class X",p:"95.2%",rank:"6"}
+  ],
+  "2024": [
+    {n:"Tanmay Kumar",s:"Class X",p:"97.8%",rank:"1"},
+    {n:"Riya Sharma",s:"Class X",p:"97.1%",rank:"2"},
+    {n:"Aarav Singh",s:"Class X",p:"96.6%",rank:"3"},
+    {n:"Kajal Verma",s:"Class X",p:"96.0%",rank:"4"},
+    {n:"Vikash Yadav",s:"Class X",p:"95.4%",rank:"5"},
+    {n:"Anjali Kumari",s:"Class X",p:"94.9%",rank:"6"}
+  ],
+  "2023": [
+    {n:"Gaurav Kumar",s:"Class X",p:"97.2%",rank:"1"},
+    {n:"Simran Kaur",s:"Class X",p:"96.5%",rank:"2"},
+    {n:"Aman Raj",s:"Class X",p:"96.0%",rank:"3"},
+    {n:"Priyanka Jha",s:"Class X",p:"95.6%",rank:"4"},
+    {n:"Ritesh Ranjan",s:"Class X",p:"95.0%",rank:"5"},
+    {n:"Neha Bharti",s:"Class X",p:"94.5%",rank:"6"}
+  ]
 };
-let tYear="2025", tCls="xii";
+let tYear="2025";
 function initials(n){return n.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase()}
 function renderToppers(){
-  document.getElementById('topWrap').innerHTML = TOPPERS[tYear][tCls].map((t,i)=>`
+  document.getElementById('topWrap').innerHTML = TOPPERS[tYear].map((t,i)=>`
     <div class="tp-card ${i===0?'first':''}">
       <div class="rank">${t.rank}</div>
       <div class="av">${initials(t.n)}</div>
@@ -942,8 +893,9 @@ function renderToppers(){
       <div class="pct">${t.p}</div>
       <div class="stream">CBSE Board · ${tYear}</div>
     </div>`).join('');
-  /* home teaser = top 3 of current year xii */
-  document.getElementById('homeToppers').innerHTML = TOPPERS[tYear]["xii"].slice(0,3).map(t=>`
+  
+  /* home teaser = top 3 of current year */
+  document.getElementById('homeToppers').innerHTML = TOPPERS[tYear].slice(0,3).map(t=>`
     <div class="tcard">
       <div class="av">${initials(t.n)}</div>
       <h3>${t.n}</h3>
@@ -952,7 +904,6 @@ function renderToppers(){
     </div>`).join('');
 }
 function setYear(y,btn){tYear=y;document.querySelectorAll('.tyr').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderToppers()}
-function setCls(c,btn){tCls=c;document.querySelectorAll('.ctr').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderToppers()}
 renderToppers();
 
 /* ===== WHATSAPP FORMS ===== */
